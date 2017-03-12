@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Animation 실습 - 날씨아이콘</title>
+<style type="text/css">
+/* Layout */
+body {
+    background-color: #e9ecef;
+}
+.box {
+    width: 125px;
+    margin: 20px auto;
+    border: 1px solid #000;
+    text-align: center
+}
+.box p {
+    margin: 0;
+    background-color: #ddd;
+    line-height: 25px;
+}
+.icon {
+    position: relative;
+    width: 125px;
+    height: 125px;
+}
+
+/* Image */
+.icon.wt24 .sun,
+.icon.wt24 .cloud,
+.icon.wt24 .rain1,
+.icon.wt24 .rain2,
+.icon.wt24 .snow {
+    background-image: url(img/sp_wt24.png);
+    background-size: 109px 120px;
+}
+.icon.wt24 .sun {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 63px;
+    height: 63px;
+    background-position: 0 -57px;
+}
+.icon.wt24 .cloud {
+    position: absolute;
+    top: 30px;
+    left: 12px;
+    width: 83px;
+    height: 52px;
+    background-position: 0 0;
+}
+.icon.wt24 .rain1 {
+    position: absolute;
+    top: 88px;
+    left: 23px;
+    width: 17px;
+    height: 22px;
+    background-position: -88px -28px;
+}
+.icon.wt24 .rain2 {
+    position: absolute;
+    top: 88px;
+    left: 43px;
+    width: 17px;
+    height: 22px;
+    background-position: -88px -55px;
+}
+.icon.wt24 .snow {
+    position: absolute;
+    top: 88px;
+    left: 64px;
+    width: 21px;
+    height: 23px;
+    background-position: -88px 0;
+}
+/* Animation */
+
+</style>
+</head>
+<body>
+<div class="box">
+    <p>24. 가끔비 또는 눈</p>
+    <div class="icon wt24">
+        <div class="sun"></div>
+        <div class="cloud"></div>
+        <div class="rain1"></div>
+        <div class="rain2"></div>
+        <div class="snow"></div>
+    </div>
+</div>
+</body>
+</html>

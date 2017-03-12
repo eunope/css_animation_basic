@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Animation 실습 - 날씨아이콘</title>
+<style type="text/css">
+/* Layout */
+body {
+    background-color: #e9ecef;
+}
+.box {
+    width: 125px;
+    margin: 20px auto;
+    border: 1px solid #000;
+    text-align: center
+}
+.box p {
+    margin: 0;
+    background-color: #ddd;
+    line-height: 25px;
+}
+.icon {
+    position: relative;
+    width: 125px;
+    height: 125px;
+}
+
+/* Image */
+.icon.wt5 .sun,
+.icon.wt5 .cloud_front,
+.icon.wt5 .cloud_back {
+    background-image: url(img/sp_wt5.png);
+    background-size: 175px 134px;
+}
+.icon.wt5 .sun {
+    position: absolute;
+    top: 12px;
+    left: 19px;
+    width: 89px;
+    height: 89px;
+    background-position: 0 0;
+}
+.icon.wt5 .cloud_front {
+    position: absolute;
+    top: 52px;
+    left: 8px;
+    width: 81px;
+    height: 51px;
+    background-position: -94px 0;
+}
+.icon.wt5 .cloud_back {
+    position: absolute;
+    top: 51px;
+    right: 8px;
+    width: 64px;
+    height: 40px;
+    background-position: 0 -94px;
+}
+/* Animation */
+
+</style>
+</head>
+<body>
+<div class="box">
+    <p>5. 구름많음(낮)</p>
+    <div class="icon wt5">
+        <div class="cloud_back"></div>
+        <div class="sun"></div>
+        <div class="cloud_front"></div>
+        
+    </div>
+</div>
+</body>
+</html>
